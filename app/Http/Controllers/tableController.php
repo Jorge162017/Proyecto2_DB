@@ -31,9 +31,9 @@ class tableController extends Controller
 
     public function save(Request $request){
         $validator = Validator::make($request->all(), [
-            'AreaId' => 'required|integer',
+            'areaid' => 'required|integer',
             'capacidad' => 'required|integer',
-            'puedeMoverse' => 'required|boolean',
+            'puedemoverse' => 'required|boolean',
             'disponible' => 'required|boolean',
         ]);
 
@@ -41,10 +41,10 @@ class tableController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        $table = new Table();
-        $table->AreaId = $request->input('AreaId');
+        $table = new Mesas();
+        $table->areaid = $request->input('areaid');
         $table->capacidad = $request->input('capacidad');
-        $table->puedeMoverse = $request->input('puedeMoverse');
+        $table->puedemoverse = $request->input('puedemoverse');
         $table->disponible = $request->input('disponible');
         $table->save();
 
@@ -66,7 +66,7 @@ class tableController extends Controller
 
     public function update(Request $request, $id){
         
-        $table = Table::find($id);
+        $table = Mesas::find($id);
         if (!$table) {
             return response()->json(['error' => 'Table not found'], 404);
         }

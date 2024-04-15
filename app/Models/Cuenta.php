@@ -17,9 +17,13 @@ class Cuenta extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = "cuenta";
+    protected $primaryKey = 'cuentaid';
+    
     protected $fillable = [
-        'CuentaId',
-        'MesaId',
+        'cuentaid',
+        'mesaid',
         'estado',
         'total',
         'fecha',

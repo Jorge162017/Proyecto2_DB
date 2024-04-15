@@ -17,11 +17,15 @@ class Mesas extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = "mesas";
+    protected $primaryKey = 'mesaid';
+    
     protected $fillable = [
-        'MesaId',
-        'AreaId',
+        'mesaid',
+        'areaid',
         'capacidad',
-        'puedeMoverse',
+        'puedemoverse',
         'disponible',
     ];
 
