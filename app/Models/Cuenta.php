@@ -25,6 +25,7 @@ class Cuenta extends Authenticatable
         'cuentaid',
         'mesaid',
         'estado',
+        'clienteid',
         'total',
         'fecha',
     ];

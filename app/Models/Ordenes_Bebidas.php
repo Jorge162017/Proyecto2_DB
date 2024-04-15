@@ -17,10 +17,15 @@ class Ordenes_Bebidas extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = "ordenes_bebidas";
+    protected $primaryKey = 'orden_bebida_id';
+
     protected $fillable = [
         'orden_bebida_id',
         'cuentaid',
         'bebidaid',
         'cantidad',
+        'status'
     ];
 }

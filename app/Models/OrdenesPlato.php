@@ -10,11 +10,15 @@ class OrdenesPlato extends Model
     use HasFactory;
 
 
+    protected $table = "ordenes_platos";
+    protected $primaryKey = 'ordenid';
+
     protected $fillable = [
         'ordenid',
         'cuentaid',
         'platoid',
         'cantidad',
+        'status'
     ];
 
 }

@@ -17,6 +17,10 @@ class Cliente extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = "cliente";
+    protected $primaryKey = 'clienteid';
+
     protected $fillable = [
         'ClienteId',
         'nombre',

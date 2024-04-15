@@ -13,7 +13,7 @@ class platosController extends Controller
         return $platos->paginate(2);
     }
 
-    public function __construct(\App\Models\Areas $platos){
+    public function __construct(\App\Models\Platos $platos){
         $this->platos = $platos;
     }
 
