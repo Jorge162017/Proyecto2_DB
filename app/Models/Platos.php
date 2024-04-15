@@ -22,6 +22,7 @@ class Platos extends Authenticatable
         'nombre',
         'descripcion',
         'precio',
+        'estado_Id'
     ];
 
 }
